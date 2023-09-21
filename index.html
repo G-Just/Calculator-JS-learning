@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="calculator-wrapper">
+      <div id="output">
+        <label id="output-text"></label>
+      </div>
+
+      <div id="keypad">
+        <div id="row-0" class="row">
+          <input type="button" value="(" onclick="eq('mod', 'l-b')" />
+          <input type="button" value=")" onclick="eq('mod', 'r-b')" />
+          <input
+            type="button"
+            value="&larr;"
+            onclick="eq('mod', 'backspace')"
+          />
+          <input type="button" value="C" onclick="eq('mod', 'C')" />
+        </div>
+        <div id="row-1" class="row">
+          <input type="button" value="7" onclick="eq('num', 7)" />
+          <input type="button" value="8" onclick="eq('num', 8)" />
+          <input type="button" value="9" onclick="eq('num', 9)" />
+          <input type="button" value="÷" onclick="eq('op', '/')" />
+        </div>
+        <div id="row-2" class="row">
+          <input type="button" value="4" onclick="eq('num', 4)" />
+          <input type="button" value="5" onclick="eq('num', 5)" />
+          <input type="button" value="6" onclick="eq('num', 6)" />
+          <input type="button" value="x" onclick="eq('op', 'x')" />
+        </div>
+        <div id="row-3" class="row">
+          <input type="button" value="1" onclick="eq('num', 1)" />
+          <input type="button" value="2" onclick="eq('num', 2)" />
+          <input type="button" value="3" onclick="eq('num', 3)" />
+          <input type="button" value="-" onclick="eq('op', '-')" />
+        </div>
+        <div id="row-4" class="row">
+          <input type="button" value="0" onclick="eq('num', 0)" />
+          <input type="button" value="." onclick="eq('mod', '.')" />
+          <input type="button" value="=" onclick="eq('mod', 'calc')" />
+          <input type="button" value="+" onclick="eq('op', '+')" />
+        </div>
+      </div>
+    </div>
+    <div id="history-wrapper">
+      <h1>History</h1>
+      <hr />
+      <p id="history"></p>
+      <button onclick="eq('hist', 'clear')">Clear history</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
